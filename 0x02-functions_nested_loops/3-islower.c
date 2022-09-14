@@ -1,4 +1,4 @@
-#iinclude "main.h"
+#include "main.h"
 /**
  * _islower - Check main
  * @c: An input character
