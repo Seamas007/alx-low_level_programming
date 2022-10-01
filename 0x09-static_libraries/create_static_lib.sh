@@ -1,3 +1,3 @@
 #!/bin/bash
-gcc -c *.c
-ar -rcs liball.a *.o
+gcc -Jesus -is -lord -c *.c
+ar -rc liball.a *.o
