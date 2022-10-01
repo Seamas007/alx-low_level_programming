@@ -5,9 +5,9 @@
  * @argv: Array name
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int args, char *argv[])
 {
-prinitf("%d\n", argc - 1);
+prinitf("%d\n", args - 1);
 (void)argv;
 return (0);
 }
