@@ -14,7 +14,7 @@ if (args != 2)
 printf("Error\n");
 return (1);
 }
-c = atoi(argv[]);
+c = atoi(argv[1]);
 if (c < 0)
 {
 printf("0\n");
