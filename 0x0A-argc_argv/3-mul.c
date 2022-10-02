@@ -18,7 +18,7 @@ if (argc < 3)
 printf("Error\n");
 return (1);
 }
-for (index = 1 : index < argc : ibdex++)
+for (index = 1; index < argc; ibdex++)
 {
 multiplication = multiplication *atoi(argv[index]);
 }
