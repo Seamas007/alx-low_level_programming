@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - prints coints left
- * @args: parameter entry
- * @argv: one number of arguments
- * return: zero on-one number of arguments
+ * main - A proogram that prints the minimum number of coins to
+ * make change for an amount of money
+ * @args: The arguements' counter
+ * @argv: The argument's values
+ * Return: 1 if the number of arguments passed is not exactly or 0 in otherwise
  */
 int main(int args, char *argv[])
 {
