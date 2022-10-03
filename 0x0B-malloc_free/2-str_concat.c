@@ -34,7 +34,7 @@ i = 0;
 while (i < len1)
 {
 nstr[i] = s1[i];
-1++;
+i++;
 }
 j = 0;
 while (i <= size)
