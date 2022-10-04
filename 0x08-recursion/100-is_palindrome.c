@@ -14,6 +14,7 @@ if (!*s)
 return (0);
 }
 return (_strlen_recursion(s + 1) + 1);
+}
 /**
  * is_palindrome - A function that checks if s is a palindrome string
  * @s: An inpuit string
@@ -27,7 +28,6 @@ if (len <= 1)
 return (1);
 return (helper_palindrome(s, len));
 }
-
 /**
  * helper_palindrome - A function with a revesed string
  * @s: An input string
@@ -44,4 +44,5 @@ return (helper_palindrome(s + 1, len - 2));
 }
 else
 return (0);
+
 }
