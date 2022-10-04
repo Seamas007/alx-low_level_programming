@@ -1,19 +1,19 @@
 #include "main.h"
 /**
- * wildcmp - A function that compares two strings
- * @s1: First input string
- * @s2: Second input string
- * Return: 1 if strings identical and 0 in otherwise
+ * print_number - prints numbers
+ * @n: number to be printed
+ * Return:void
  */
-int wildcmp(char *s1, char *s2)
+void print_number(int n)
 {
-if (!*s1 && !*s2)
-return (1);
-if (*s1 == *s2)
-return (wildcmp(s1 + 1, s2 + 1));
-if (*s2 == '*' && (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2)))
-return (1);
-if (*s2 == '*' && *(s1 + 1) && *s2)
-return (0);
-return (0);
+unsigned int x;
+x = n;
+if (n < 0)
+{
+_putchar(45);
+x = -n;
+}
+if (x / 10)
+print_number(x / 10);
+_putchar((x % 10) + '0');
 }
