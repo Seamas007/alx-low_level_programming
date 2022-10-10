@@ -19,7 +19,7 @@ lenO = 0;
 while (owner[lenO] != '\0')
 lenO++;
 n_dog = malloc(sizeof(struct dog));
-if (n_dog == NLL)
+if (n_dog == NULL)
 {
 free(n_dog);
 return (NULL);
@@ -35,7 +35,7 @@ n_dog->owner = malloc(lenO + 1);
 if (n_dog->owner == NULL)
 {
 free(n_dog->name);
-free(nb_dog->owner);
+free(n_dog->owner);
 free(n_dog);
 return (NULL);
 }
