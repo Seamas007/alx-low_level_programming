@@ -1,26 +1,35 @@
-#ifndef CALC_H
-#define CALC_H
-/*
-* Desc: Header file containing all structures and
-* prototypes used by the 3-main.c program.
-*/
-
+#include "3-calc.h"
 /**
- * struct op - struct op
+ *main - check arguments
+ *@argc: argument count
+ *@argv: argument vector.
  *
- * @op: The operator.
- * @f: The function associated
+ *Return: error if number of arguments is wrong
  */
-
-typedef struct op
+int main(int argc, char *argv[])
 {
-char *op;
-int (*f)(int a, int b);
-} op_t;
-int op_add(int a, int b);
-int op_sub(int a, int b);
-int op_mul(int a, int b);
-int op_div(int a, int b);
-int op_mod(int a, int b);
-int (*get_op_func(char *s))(int, int);
-#endif /* CALC_H */
+int a = 0, b = 0, res = 0;
+char s;
+if (argc != 4)
+{
+print("Error\n");
+exit(98);
+}
+/* check if theres only one operator */
+if (argv[2][1] != '\0')
+{
+printf("Error\n");
+exit(99);
+}
+s = argv[2][0];
+if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
+{
+printf("Error\n");
+exit(99);
+}
+a = atoi(argv[1]);
+b = atoi(argv[3]);
+res = (get_op_func(argv[2]))(a, b);
+printf("%d\n", res);
+return (0);
+}
