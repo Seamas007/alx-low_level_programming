@@ -22,7 +22,7 @@ printf("Error\n");
 exit(99);
 }
 s = argv[2][0];
-if (s != '+' && s != '-' && s != '*' && s != '%')
+if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
 {
 printf("Error\n");
 exit(99);
