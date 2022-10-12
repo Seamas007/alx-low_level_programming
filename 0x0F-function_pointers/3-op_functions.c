@@ -1,5 +1,5 @@
 #include "3-calc.h"
-i/**
+/**
  *op_add - return the sum of 2 numbers.
  *@a: integer.
  *@b: integer.
