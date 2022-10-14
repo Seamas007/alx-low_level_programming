@@ -1,24 +1,22 @@
-#include <stdio.h>
 #include <stdarg.h>
-#include <stdlib.h>
 /**
- *print_numbers - prints numbers followed by a new line.
- *@separator: string to be printed between numbers.
- *@n: number of integers passed to the function.
+ *sum_them_all - returns the sum of all its parameters.
+ *@n: number of arguments to be summed.
  *
- *Return: void
+ *Return: sum or 0.
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+
+int sum_them_all(const unsigned int n, ...)
 {
-unsigned int i;
-va_list numbers;
-va_start(numbers, n);
+unsigned int sum = 0, i;
+va_list arglist;
+if (n == 0)
+return (0);
+va_start(arglist, n);
 for (i = 0; i < n; i++)
 {
-printf("%d", va_arg(numbers, int));
-if (i < n - 1 && separator != NULL)
-printf("%s", separator);
+sum += va_arg(arglist, int);
 }
-printf("\n");
-va_end(numbers);
+va_end(arglist);
+return (sum);
 }
